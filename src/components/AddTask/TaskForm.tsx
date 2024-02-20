@@ -1,8 +1,9 @@
-import { FormEvent, useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { TaskFormProps } from './TaskForm.types';
 import './TaskForm.css';
-const TaskForm = ({ addTask }: TaskFormProps) => {
-  const [taskContent, setTaskContent] = useState('');
+
+const TaskForm: React.FC<TaskFormProps> = ({ addTask }) => {
+  const [taskContent, setTaskContent] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTaskContent(e.target.value);

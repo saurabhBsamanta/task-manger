@@ -8,3 +8,6 @@
   flex-direction: column;
   gap: 15px;
 }
+.task-category > h2::first-letter {
+  text-transform: capitalize;
+}

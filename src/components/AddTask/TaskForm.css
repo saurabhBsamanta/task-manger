@@ -1,9 +1,11 @@
 .add-task {
   display: flex;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.input {
+/* .input {
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 10px;
@@ -15,4 +17,31 @@
   padding: 10px 15px;
   background-color: #2563eb;
   color: white;
+}  */
+/* .add-task input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 100%;
+} */
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+.add-task button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task button:hover {
+  background-color: #0056b3;
 }

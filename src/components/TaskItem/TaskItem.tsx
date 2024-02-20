@@ -1,6 +1,6 @@
-import { TaskItemProps } from './TaskItem.types';
-import { CSS } from '@dnd-kit/utilities';
 import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+import { TaskItemProps } from './TaskItem.types';
 
 import './TaskItem.css';
 const TaskItem = ({
@@ -46,7 +46,7 @@ const TaskItem = ({
       <div className="task-content">{task.content}</div>
       <div className="task-icons">
         <i
-          className="far fa-star"
+          className="fa fa-play-circle"
           onClick={() => onStarClick(task.id, sourceCategory)}
         ></i>
         <i

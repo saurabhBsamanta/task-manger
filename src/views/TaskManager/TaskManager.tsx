@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import TaskForm from '../../components/AddTask/TaskForm';
 import TaskList from '../../components/TaskList.tsx/TaskList';
 import { Task, Tasks, addTask } from './TaskManaget.types';
-
+import './TaskManager.css';
 // const sensors = useSensors(
 //   useSensor(PointerSensor),
 //   useSensor(KeyboardSensor, {
@@ -105,30 +105,40 @@ const TaskManager = () => {
   console.log('tasks', addedTasks);
 
   return (
-    <div>
-      <TaskForm addTask={addTask} />
-      <div className="task-app">
-        <TaskList
-          category="added"
-          tasks={addedTasks}
-          setAaddedTasks={setAaddedTasks}
-          addTask={addTask}
-          moveTask={moveTask}
-        />
-        <TaskList
-          category="started"
-          tasks={startedTasks}
-          setAaddedTasks={setStartedTasks}
-          addTask={addTask}
-          moveTask={moveTask}
-        />
-        <TaskList
-          category="completed"
-          tasks={completedTasks}
-          setAaddedTasks={setCompletedTasks}
-          addTask={addTask}
-          moveTask={moveTask}
-        />
+    <div className="task-container">
+      <h2>Task Manager</h2>
+      <div className="task-input">
+        <TaskForm addTask={addTask} />
+      </div>
+      <div className="todo-categories">
+        <div className="category" id="added-category">
+          <TaskList
+            category="added"
+            tasks={addedTasks}
+            setAaddedTasks={setAaddedTasks}
+            addTask={addTask}
+            moveTask={moveTask}
+          />
+        </div>
+        <div className="category" id="added-category">
+          <TaskList
+            category="started"
+            tasks={startedTasks}
+            setAaddedTasks={setStartedTasks}
+            addTask={addTask}
+            moveTask={moveTask}
+          />
+        </div>
+        <div className="category" id="added-category">
+          <TaskList
+            category="completed"
+            tasks={completedTasks}
+            setAaddedTasks={setCompletedTasks}
+            addTask={addTask}
+            moveTask={moveTask}
+          />
+        </div>
+
         {/* <TaskList category="started" tasks={tasks.started} />
         <TaskList category="completed" tasks={tasks.completed} /> */}
         {/* <TaskList
