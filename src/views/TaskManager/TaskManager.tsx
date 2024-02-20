@@ -90,6 +90,7 @@ const TaskManager = () => {
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks') || '{}');
+    console.log('storedTasks', storedTasks);
     if (storedTasks) {
       setAaddedTasks(storedTasks.addedTasks || []);
       setStartedTasks(storedTasks.startedTasks || []);
